@@ -1,25 +1,33 @@
 export default function Nav(props) {
     return (
         <nav>
-            <ul role='list'>
+            <ul className="list">
                 <li>
-                    <a href='#'>Home</a>
+                    <a href='/'>Home</a>
                 </li>
                 <li>
-                    <a href='#'>Dashboard</a>
+                    <a href='/dashboard'>Dashboard</a>
                 </li>
-                <li>
-                    <a href='#'>My Posts</a>
-                </li>
-                <li>
-                    <a href='#'>Log Out</a>
-                </li>
-                <li>
-                    <a href='#'>Register</a>
-                </li>
-                <li>
-                    <a href='#'>Log In</a>
-                </li>
+                {sessionStorage.getItem('user') && (
+                    <li>
+                        <a href='myposts'>My Posts</a>
+                    </li>
+                )}
+                {sessionStorage.getItem('user') && (
+                    <li>
+                        <a href='/logout'>Log Out</a>
+                    </li>
+                )}
+                {!sessionStorage.getItem('user') && (
+                    <li>
+                        <a href='/register'>Register</a>
+                    </li>
+                )}
+                {!sessionStorage.getItem('user') && (
+                    <li>
+                        <a href='/login'>Log In</a>
+                    </li>
+                )}
             </ul>
         </nav>
     );

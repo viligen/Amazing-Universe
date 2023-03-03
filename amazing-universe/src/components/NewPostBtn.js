@@ -1,3 +1,3 @@
 export default function NewPostBtn() {
-    return <button>New Post</button>;
+    return <button className="postBtn">New Post</button>;
 }

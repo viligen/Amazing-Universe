@@ -3,11 +3,15 @@ import './App.css';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
+
 function App() {
+ 
+
+    // console.log(posts);
     return (
-        <div classNameName='App'>
+        <div className='App'>
             <Header />
-            <Main />
+            <Main/>
             <Footer />
         </div>
     );

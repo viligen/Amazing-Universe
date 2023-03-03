@@ -1,13 +1,10 @@
-export default function PostArticle() {
+export default function PostArticle(post) {
     return (
         <article className='card'>
-            <img src='images/London.jpg' alt='img' />
-            <h4>Post Title</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
-            <button>Discover more</button>
+            <img src={post.post.url} alt='img' />
+            <h4>{post.post.title}</h4>
+            <p>{post.post.text}</p>
+            <button>Reveal More</button>
         </article>
     );
 }
