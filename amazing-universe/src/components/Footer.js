@@ -5,49 +5,42 @@ export default function Footer() {
             <section className='footer-flex'>
                 <ul role='list'>
                     <li>
-                        <a href=''>Contacts</a>
+                        <b>Contacts</b>
                     </li>
                     <li>
-                        <a href=''>E-mail</a>
+                        <a href='https://gmail.com'>viligen@gmail.com</a>
                     </li>
+
                     <li>
-                        <a href=''>Log Out</a>
-                    </li>
-                    <li>
-                        <a href=''>Phone</a>
+                        <a href='https://softuni.bg'>SoftUni: @viligen</a>
                     </li>
                 </ul>
                 <ul role='list'>
                     <li>
-                        <a href=''>About us</a>
+                        <b>Links</b>
                     </li>
                     <li>
-                        <a href=''>FAQ</a>
+                        <a href='https://pixabay.com/'>Pixabay</a>
                     </li>
                     <li>
-                        <a href=''>Terms and conditions</a>
-                    </li>
-                    <li>
-                        <a href=''>Contact</a>
+                        <a href='https://www.nasa.gov/'>NASA</a>
                     </li>
                 </ul>
                 <ul role='list' className='icons'>
-                    <li>
-                        <a href=''>Follow us on</a>
-                    </li>
+                    <li>Follow me on</li>
                     <div className='icons-row'>
                         <li>
-                            <a href=''>
+                            <a href='https://www.instagram.com/'>
                                 <i className='fab fa-instagram'></i>
                             </a>
                         </li>
                         <li>
-                            <a href=''>
-                                <i className='fab fa-facebook-f'></i>
+                            <a href='https://github.com/viligen/'>
+                                <i className='fab fa-github-square'></i>
                             </a>
                         </li>
                         <li>
-                            <a href=''>
+                            <a href='https://twitter.com/'>
                                 <i className='fab fa-twitter'></i>
                             </a>
                         </li>

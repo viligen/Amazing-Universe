@@ -1,7 +1,7 @@
-const host = 'http://localhost:3001';
+const host = 'http://localhost:3030';
 
 export async function requestFunc(method, url, data) {
-    let user = localStorage.user;
+    let user = sessionStorage.getItem('user');
     let options = {
         method: method,
         mode: 'no-cors',
@@ -31,7 +31,7 @@ export async function requestFunc(method, url, data) {
             return; //alert('Successful logout');
         }
         if (resp.status === 403) {
-            localStorage.removeItem(user);
+            sessionStorage.removeItem(user);
             return alert('Please log in');
         }
         return await resp.json();
