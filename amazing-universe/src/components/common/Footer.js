@@ -3,7 +3,7 @@ export default function Footer() {
         <footer>
             <h1>Amazing Universe</h1>
             <section className='footer-flex'>
-                <ul role='list'>
+                <ul className='list'>
                     <li>
                         <b>Contacts</b>
                     </li>
@@ -15,7 +15,7 @@ export default function Footer() {
                         <a href='https://softuni.bg'>SoftUni: @viligen</a>
                     </li>
                 </ul>
-                <ul role='list'>
+                <ul className='list'>
                     <li>
                         <b>Links</b>
                     </li>
@@ -26,7 +26,7 @@ export default function Footer() {
                         <a href='https://www.nasa.gov/'>NASA</a>
                     </li>
                 </ul>
-                <ul role='list' className='icons'>
+                <ul className='list icons'>
                     <li>Follow me on</li>
                     <div className='icons-row'>
                         <li>
