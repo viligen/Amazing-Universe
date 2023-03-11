@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getOnePost } from '../../services/postServices';
 import './PostDetails.css';
 
-let likes;
-let _id = 'ff436770-76c5-40e2-b231-77409eda7a61';
-
-export default function PostDetails(p_id = _id) {
+export default function PostDetails() {
+    let likes;
+    let { postId } = useParams();
     const [post, setPost] = useState(null);
     useEffect(() => {
-        getOnePost(_id).then((postData) => {
+        getOnePost(postId).then((postData) => {
             setPost(postData);
         });
-    }, []);
+    }, [postId]);
 
     let user = sessionStorage.getItem('user');
+
     return post ? (
         <article className='cardLarge'>
             <img src={post.imageUrl} alt={post.title + 'img'} />
@@ -32,24 +34,24 @@ export default function PostDetails(p_id = _id) {
                 <b>Likes</b>: {likes}
             </p>
 
-            {user && post._ownerId !== user._id && (
-                <a href='/'>
+            {user && post._ownerId !== JSON.parse(user)._id && (
+                <Link to='/'>
                     <i className='fas fa-thumbs-up'></i>
-                </a>
+                </Link>
             )}
-            {user && post._ownerId === user._id && (
+            {user && post._ownerId === JSON.parse(user)._id && (
                 <>
-                    <a href='/'>
+                    <Link to='/'>
                         <i className='fas fa-edit'></i>
-                    </a>
-                    <a href='/'>
+                    </Link>
+                    <Link to='/'>
                         <i className='fas fa-trash-alt'></i>
-                    </a>
+                    </Link>
                 </>
             )}
-            <a href='/dashboard'>
+            <Link to='/dashboard'>
                 <i className='fas fa-window-close'></i>
-            </a>
+            </Link>
         </article>
     ) : (
         <p>Loading...</p>

@@ -1,4 +1,4 @@
-import NewPostBtn from '../NewPostBtn';
+import NewPostBtn from '../btns/NewPostBtn';
 
 export default function HeroInfo() {
     return (

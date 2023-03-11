@@ -2,9 +2,10 @@ const host = 'http://localhost:3030';
 
 export async function requestFunc(method, url, data) {
     let user = sessionStorage.getItem('user');
+
     let options = {
         method: method,
-        mode: 'no-cors',
+        // mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -31,9 +32,10 @@ export async function requestFunc(method, url, data) {
             return; //alert('Successful logout');
         }
         if (resp.status === 403) {
-            sessionStorage.removeItem(user);
+            sessionStorage.removeItem('user');
             return alert('Please log in');
         }
+
         return await resp.json();
     } catch (err) {
         console.log(err.message);

@@ -1,4 +1,4 @@
-export default function CreatePostForm() {
+export default function EditPostForm() {
     return (
         <form>
             <label htmlFor='title'>Title:</label>
@@ -10,8 +10,8 @@ export default function CreatePostForm() {
                 name='description'
                 defaultValue=''
             />
-            <label htmlFor='source'>Source:</label>
-            <input type='text' id='source' name='source' defaultValue='' />
+            <label htmlFor='author'>Source:</label>
+            <input type='text' id='author' name='author' defaultValue='' />
             <label htmlFor='date'>Date:</label>
             <input type='text' id='date' name='date' defaultValue='' />
             <label htmlFor='imageUrl'>Image URL:</label>

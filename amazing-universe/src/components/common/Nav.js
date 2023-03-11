@@ -1,20 +1,51 @@
+import { NavLink } from 'react-router-dom';
+import styles from './Nav.module.css';
+
 export default function Nav(props) {
     return (
         <nav>
             <ul className='list'>
                 <li>
-                    <a href='/'>Home</a>
+                    <NavLink
+                        to='/'
+                        className={({ isActive }) =>
+                            isActive ? styles.active : ''
+                        }
+                    >
+                        Home
+                    </NavLink>
                 </li>
                 <li>
-                    <a href='/dashboard'>Dashboard</a>
+                    <NavLink
+                        to='/dashboard'
+                        className={({ isActive }) =>
+                            isActive ? styles.active : ''
+                        }
+                    >
+                        Dashboard
+                    </NavLink>
                 </li>
                 {sessionStorage.getItem('user') && (
                     <>
                         <li>
-                            <a href='myposts'>My Posts</a>
+                            <NavLink
+                                to='/myposts'
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ''
+                                }
+                            >
+                                My Posts
+                            </NavLink>
                         </li>
                         <li>
-                            <a href='/logout'>Log Out</a>
+                            <NavLink
+                                to='/logout'
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ''
+                                }
+                            >
+                                Log Out
+                            </NavLink>
                         </li>
                     </>
                 )}
@@ -22,10 +53,24 @@ export default function Nav(props) {
                 {!sessionStorage.getItem('user') && (
                     <>
                         <li>
-                            <a href='/register'>Register</a>
+                            <NavLink
+                                to='/register'
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ''
+                                }
+                            >
+                                Register
+                            </NavLink>
                         </li>
                         <li>
-                            <a href='/login'>Log In</a>
+                            <NavLink
+                                to='/login'
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ''
+                                }
+                            >
+                                Log In
+                            </NavLink>
                         </li>
                     </>
                 )}
