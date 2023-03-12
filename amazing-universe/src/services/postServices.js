@@ -30,7 +30,7 @@ export async function createPost(data) {
 export async function getMyPosts(userId) {
     const postsData = await requestFunc(
         `GET`,
-        `/data/posts?where=_ownerId%3D%22${userId()}%22&sortBy=_createdOn%20desc`
+        `/data/posts?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`
     );
     return await postsData;
 }

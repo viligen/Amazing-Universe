@@ -7,7 +7,7 @@ export default function Main() {
             <section>
                 <h3>Most Recent Posts</h3>
                 <NewPostBtn />
-                <PostsList count={2} />
+                <PostsList count={3} />
             </section>
         </main>
     );

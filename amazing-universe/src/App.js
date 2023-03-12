@@ -12,17 +12,14 @@ import LoginUserForm from './components/forms/LoginUserForm';
 import LogoutUser from './components/LogoutUser';
 import NotFound from './components/404';
 import MainMyPosts from './components/mains/MainMyPosts';
-import EditPostForm from './components/forms/EditPostForm';
+
 import DeletePost from './components/posts/DeletePost';
 import LikePost from './components/posts/LikePost';
+import MainEditPost from './components/mains/MainEditPost';
 // import { userContext} from './context/userContext';
 // import { useState } from 'react';
 
 function App() {
-    // const [ctxUser, setCtxuser] = useState();
-    // let user = userContext
-    // setCtxuser(user)
-
     return (
         // <userContext.Provider value={ctxUser}>
         <div className='App'>
@@ -37,11 +34,11 @@ function App() {
                 <Route path='/myposts' element={<MainMyPosts />} />
 
                 <Route path='/posts/create' element={<MainCreatePost />} />
-                <Route path='/posts/:postId' element={<MainPostDetails />}>
-                    <Route path='edit' element={<EditPostForm />} />
-                    <Route path='delete' element={<DeletePost />} />
-                    <Route path='like' element={<LikePost />} />
-                </Route>
+                <Route path='/posts/:postId' element={<MainPostDetails />} />
+                <Route path='/posts/:postId/edit' element={<MainEditPost />} />
+                <Route path='/posts/:postId/delete' element={<DeletePost />} />
+                <Route path='/posts/:postId/like' element={<LikePost />} />
+
                 <Route path='*' element={<NotFound />} />
             </Routes>
             <Footer />

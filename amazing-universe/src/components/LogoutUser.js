@@ -8,5 +8,5 @@ export default function LogoutUser() {
         sessionStorage.removeItem('user');
     }, []);
 
-    return <Navigate to='/' />;
+    return <Navigate to='/' replace/>;
 }

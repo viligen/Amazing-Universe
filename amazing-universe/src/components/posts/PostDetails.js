@@ -18,7 +18,7 @@ export default function PostDetails() {
 
     return post ? (
         <article className='cardLarge'>
-            <img src={post.imageUrl} alt={post.title + 'img'} />
+            <img src={post.imageUrl} alt={post.title + ' img'} />
             <h4>{post.title}</h4>
             <p>
                 <b>Description</b>: {post.description}
@@ -41,10 +41,10 @@ export default function PostDetails() {
             )}
             {user && post._ownerId === JSON.parse(user)._id && (
                 <>
-                    <Link to='/'>
+                    <Link to={`/posts/${postId}/edit`}>
                         <i className='fas fa-edit'></i>
                     </Link>
-                    <Link to='/'>
+                    <Link to={`/posts/${postId}/delete`}>
                         <i className='fas fa-trash-alt'></i>
                     </Link>
                 </>
