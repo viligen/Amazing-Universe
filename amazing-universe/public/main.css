@@ -196,10 +196,15 @@ footer .footer-flex ul li {
 
 footer ul.icons {
     align-self: center;
+    
 }
 
 footer ul.icons div.icons-row {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+footer ul.icons i{
+    align-self: center;
+    font-size: 1.6rem;
 }

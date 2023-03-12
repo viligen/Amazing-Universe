@@ -7,8 +7,7 @@ import Main from './components/mains/Main';
 import MainCreatePost from './components/mains/MainCreatePost';
 import MainDashboard from './components/mains/MainDashboard';
 import MainPostDetails from './components/mains/MainPostDetails';
-import RegisterUserForm from './components/forms/RegisterUserForm';
-import LoginUserForm from './components/forms/LoginUserForm';
+
 import LogoutUser from './components/LogoutUser';
 import NotFound from './components/404';
 import MainMyPosts from './components/mains/MainMyPosts';
@@ -16,6 +15,8 @@ import MainMyPosts from './components/mains/MainMyPosts';
 import DeletePost from './components/posts/DeletePost';
 import LikePost from './components/posts/LikePost';
 import MainEditPost from './components/mains/MainEditPost';
+import MainLogin from './components/mains/MainLogin';
+import MainRegister from './components/mains/MainRegister';
 // import { userContext} from './context/userContext';
 // import { useState } from 'react';
 
@@ -27,8 +28,8 @@ function App() {
             <Routes>
                 <Route path='/' element={<Main />} />
                 <Route path='/dashboard' element={<MainDashboard />} />
-                <Route path='/register' element={<RegisterUserForm />} />
-                <Route path='/login' element={<LoginUserForm />} />
+                <Route path='/register' element={<MainRegister />} />
+                <Route path='/login' element={<MainLogin />} />
 
                 <Route path='/logout' element={<LogoutUser />} />
                 <Route path='/myposts' element={<MainMyPosts />} />

@@ -8,11 +8,23 @@ export default function Footer() {
                         <b>Contacts</b>
                     </li>
                     <li>
-                        <a href='https://gmail.com'>viligen@gmail.com</a>
+                        <a
+                            href='https://gmail.com'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            viligen@gmail.com
+                        </a>
                     </li>
 
                     <li>
-                        <a href='https://softuni.bg'>SoftUni: @viligen</a>
+                        <a
+                            href='https://softuni.bg'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            SoftUni @viligen
+                        </a>
                     </li>
                 </ul>
                 <ul className='list'>
@@ -20,28 +32,52 @@ export default function Footer() {
                         <b>Links</b>
                     </li>
                     <li>
-                        <a href='https://pixabay.com/'>Pixabay</a>
+                        <a
+                            href='https://pixabay.com/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            Pixabay
+                        </a>
                     </li>
                     <li>
-                        <a href='https://www.nasa.gov/'>NASA</a>
+                        <a
+                            href='https://www.nasa.gov/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            NASA
+                        </a>
                     </li>
                 </ul>
                 <ul className='list icons'>
                     <li>Follow me on</li>
                     <div className='icons-row'>
                         <li>
-                            <a href='https://www.instagram.com/'>
-                                <i className='fab fa-instagram'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='https://github.com/viligen/'>
+                            <a
+                                href='https://github.com/viligen/'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
                                 <i className='fab fa-github-square'></i>
                             </a>
                         </li>
                         <li>
-                            <a href='https://twitter.com/'>
-                                <i className='fab fa-twitter'></i>
+                            <a
+                                href='https://www.linkedin.com/in/velina-genova-a1726a37'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <i className='fab fa-linkedin'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href='https://www.instagram.com/'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <i className='fab fa-instagram'></i>
                             </a>
                         </li>
                     </div>

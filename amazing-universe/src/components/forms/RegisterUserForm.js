@@ -43,16 +43,29 @@ export default function RegisterUserForm() {
     ) : (
         <form onSubmit={onSubmitHandler}>
             <label htmlFor='email'>Email:</label>
-            <input type='email' id='emaile' name='email' defaultValue='' />
+            <input
+                type='email'
+                id='emaile'
+                name='email'
+                defaultValue=''
+                required={true}
+            />
             <label htmlFor='password'>Password:</label>
             <input
                 type='password'
                 id='password'
                 name='password'
                 defaultValue=''
+                required={true}
             />
             <label htmlFor='repass'>Repeat Password:</label>
-            <input type='password' id='repass' name='repass' defaultValue='' />
+            <input
+                type='password'
+                id='repass'
+                name='repass'
+                defaultValue=''
+                required={true}
+            />
             <button type='submit' className='postBtn'>
                 Register
             </button>

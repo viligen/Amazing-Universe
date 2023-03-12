@@ -37,13 +37,20 @@ export default function LoginUserForm() {
     ) : (
         <form onSubmit={onSubmitHandler}>
             <label htmlFor='email'>Email:</label>
-            <input type='email' id='emaile' name='email' defaultValue='' />
+            <input
+                type='email'
+                id='emaile'
+                name='email'
+                defaultValue=''
+                required={true}
+            />
             <label htmlFor='password'>Password:</label>
             <input
                 type='password'
                 id='password'
                 name='password'
                 defaultValue=''
+                required={true}
             />
             <button type='submit' className='postBtn'>
                 Login

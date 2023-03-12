@@ -1,20 +1,33 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { getAllLikes, getOwnLike } from '../../services/likeServices';
 import { getOnePost } from '../../services/postServices';
 import './PostDetails.css';
 
 export default function PostDetails() {
-    let likes;
     let { postId } = useParams();
+    let user = sessionStorage.getItem('user')
+        ? JSON.parse(sessionStorage.getItem('user'))
+        : null;
+
     const [post, setPost] = useState(null);
+    const [likes, setLikes] = useState(0);
+    const [isLiked, setOwnLike] = useState(false);
+
     useEffect(() => {
         getOnePost(postId).then((postData) => {
             setPost(postData);
         });
+        getAllLikes(postId).then((count) => {
+            setLikes(count);
+        });
+        user &&
+            getOwnLike(postId, user._id).then((isLiked) => {
+                setOwnLike(isLiked);
+                console.log(isLiked);
+            });
     }, [postId]);
-
-    let user = sessionStorage.getItem('user');
 
     return post ? (
         <article className='cardLarge'>
@@ -34,12 +47,12 @@ export default function PostDetails() {
                 <b>Likes</b>: {likes}
             </p>
 
-            {user && post._ownerId !== JSON.parse(user)._id && (
-                <Link to='/'>
+            {user && post._ownerId !== user._id && !isLiked && (
+                <Link to={`/posts/${postId}/like`}>
                     <i className='fas fa-thumbs-up'></i>
                 </Link>
             )}
-            {user && post._ownerId === JSON.parse(user)._id && (
+            {user && post._ownerId === user._id && (
                 <>
                     <Link to={`/posts/${postId}/edit`}>
                         <i className='fas fa-edit'></i>
