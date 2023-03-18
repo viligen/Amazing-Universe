@@ -1,5 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { userContext } from './context/userContext';
+import { useState, useEffect } from 'react';
 
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
@@ -17,34 +19,49 @@ import LikePost from './components/posts/LikePost';
 import MainEditPost from './components/mains/MainEditPost';
 import MainLogin from './components/mains/MainLogin';
 import MainRegister from './components/mains/MainRegister';
-// import { userContext} from './context/userContext';
-// import { useState } from 'react';
 
 function App() {
+    const [user, setCurrentUser] = useState(sessionStorage.getItem('user'));
+    const onUserChange = (newUser) => {
+        setCurrentUser(newUser);
+    };
+
+    useEffect(() => {
+        // console.log(currentUser, sessionUser);
+    }, [user]);
     return (
-        // <userContext.Provider value={ctxUser}>
-        <div className='App'>
-            <Header />
-            <Routes>
-                <Route path='/' element={<Main />} />
-                <Route path='/dashboard' element={<MainDashboard />} />
-                <Route path='/register' element={<MainRegister />} />
-                <Route path='/login' element={<MainLogin />} />
+        <userContext.Provider value={{ user, onUserChange }}>
+            <div className='App'>
+                <Header />
+                <Routes>
+                    <Route path='/' element={<Main />} />
+                    <Route path='/dashboard' element={<MainDashboard />} />
+                    <Route path='/register' element={<MainRegister />} />
+                    <Route path='/login' element={<MainLogin />} />
 
-                <Route path='/logout' element={<LogoutUser />} />
-                <Route path='/myposts' element={<MainMyPosts />} />
+                    <Route path='/logout' element={<LogoutUser />} />
+                    <Route path='/myposts' element={<MainMyPosts />} />
 
-                <Route path='/posts/create' element={<MainCreatePost />} />
-                <Route path='/posts/:postId' element={<MainPostDetails />} />
-                <Route path='/posts/:postId/edit' element={<MainEditPost />} />
-                <Route path='/posts/:postId/delete' element={<DeletePost />} />
-                <Route path='/posts/:postId/like' element={<LikePost />} />
+                    <Route path='/posts/create' element={<MainCreatePost />} />
+                    <Route
+                        path='/posts/:postId'
+                        element={<MainPostDetails />}
+                    />
+                    <Route
+                        path='/posts/:postId/edit'
+                        element={<MainEditPost />}
+                    />
+                    <Route
+                        path='/posts/:postId/delete'
+                        element={<DeletePost />}
+                    />
+                    <Route path='/posts/:postId/like' element={<LikePost />} />
 
-                <Route path='*' element={<NotFound />} />
-            </Routes>
-            <Footer />
-        </div>
-        // </userContext.Provider>
+                    <Route path='*' element={<NotFound />} />
+                </Routes>
+                <Footer />
+            </div>
+        </userContext.Provider>
     );
 }
 

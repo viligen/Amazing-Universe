@@ -39,7 +39,7 @@ export default function RegisterUserForm() {
         }
     };
     return user ? (
-        <Navigate to='/dashboard' replace />
+        <Navigate to='/' replace />
     ) : (
         <form onSubmit={onSubmitHandler}>
             <label htmlFor='email'>Email:</label>

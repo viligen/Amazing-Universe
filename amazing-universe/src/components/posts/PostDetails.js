@@ -1,19 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { userContext } from '../../context/userContext';
 import { getAllLikes, getOwnLike } from '../../services/likeServices';
 import { getOnePost } from '../../services/postServices';
 import './PostDetails.css';
 
 export default function PostDetails() {
     let { postId } = useParams();
-    let user = sessionStorage.getItem('user')
-        ? JSON.parse(sessionStorage.getItem('user'))
-        : null;
+    // let user = sessionStorage.getItem('user')
+    //     ? JSON.parse(sessionStorage.getItem('user'))
+    //     : null;
+    console.log(useContext(userContext));
+    let {user} = useContext(userContext);
+    const userId = user ? JSON.parse(user)._id : '';
+
+    
 
     const [post, setPost] = useState(null);
     const [likes, setLikes] = useState(0);
     const [isLiked, setOwnLike] = useState(false);
+    
+    console.log(user, userId, post?._ownerId);
 
     useEffect(() => {
         getOnePost(postId).then((postData) => {
@@ -22,12 +30,13 @@ export default function PostDetails() {
         getAllLikes(postId).then((count) => {
             setLikes(count);
         });
+
         user &&
-            getOwnLike(postId, user._id).then((isLiked) => {
+            getOwnLike(postId, userId).then((isLiked) => {
                 setOwnLike(isLiked);
                 console.log(isLiked);
             });
-    }, [postId]);
+    }, [postId, user, userId]);
 
     return post ? (
         <article className='cardLarge'>
@@ -47,12 +56,12 @@ export default function PostDetails() {
                 <b>Likes</b>: {likes}
             </p>
 
-            {user && post._ownerId !== user._id && !isLiked && (
+            {user && post._ownerId !== userId && !isLiked && (
                 <Link to={`/posts/${postId}/like`}>
                     <i className='fas fa-thumbs-up'></i>
                 </Link>
             )}
-            {user && post._ownerId === user._id && (
+            {user && post._ownerId === userId && (
                 <>
                     <Link to={`/posts/${postId}/edit`}>
                         <i className='fas fa-edit'></i>

@@ -1,25 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-// import { userContext } from '../../context/userContext';
+import { userContext } from '../../context/userContext';
+
 import { loginUser } from '../../services/userServices';
 
 export default function LoginUserForm() {
     const [formData, setFormdata] = useState({});
-    const [user, setUser] = useState('');
-    // const ctxUser = userContext(user);
-    // setUser(userContext)
+
+    const { onUserChange } = useContext(userContext);
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(() => {
         if (formData.password) {
             console.log(formData);
             loginUser(formData).then((result) => {
                 if (result) {
-                    setUser(result);
+                    setCurrentUser(JSON.stringify(result));
                     sessionStorage.setItem('user', JSON.stringify(result));
                 }
             });
         }
-    }, [formData]);
+    }, [formData, currentUser]);
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -32,9 +33,11 @@ export default function LoginUserForm() {
         }
     };
 
-    return user ? (
-        <Navigate to='/dashboard' replace />
+    return currentUser ? (
+        (onUserChange(currentUser), (<Navigate to='/' replace />))
     ) : (
+        // navigate('/', { replace: true })
+        // <Navigate to='/' replace />
         <form onSubmit={onSubmitHandler}>
             <label htmlFor='email'>Email:</label>
             <input
