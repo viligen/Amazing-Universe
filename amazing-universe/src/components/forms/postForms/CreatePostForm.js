@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createPost } from '../../../services/postServices';
 
+import styles from '../Forms.module.css';
+
 export default function CreatePostForm() {
     const navigate = useNavigate();
     const [formData, setFormdata] = useState({});
@@ -31,7 +33,7 @@ export default function CreatePostForm() {
 
     return (
         !post && (
-            <form onSubmit={onSubmitHandler}>
+            <form onSubmit={onSubmitHandler} className={styles.form}>
                 <label htmlFor='title'>Title:</label>
                 <input
                     type='text'

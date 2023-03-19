@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { userContext } from '../../../context/userContext';
 import { registerUser } from '../../../services/userServices';
 
+import styles from '../Forms.module.css';
+
 export default function RegisterUserForm() {
     const { onUserChange } = useContext(userContext);
     const navigate = useNavigate();
@@ -42,7 +44,7 @@ export default function RegisterUserForm() {
     };
     return (
         !user && (
-            <form onSubmit={onSubmitHandler}>
+            <form onSubmit={onSubmitHandler} className={styles.form}>
                 <label htmlFor='email'>Email:</label>
                 <input
                     type='email'

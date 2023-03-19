@@ -1,6 +1,8 @@
-import PostArticle from './PostArticle';
+import PostArticle from '../article/PostArticle';
 import { useState, useEffect } from 'react';
-import { getAllPosts } from '../../services/postServices';
+import { getAllPosts } from '../../../services/postServices';
+
+import styles from './PostsList.module.css';
 
 export default function PostsList({ count, owner }) {
     const [posts, setPosts] = useState([]);
@@ -12,7 +14,7 @@ export default function PostsList({ count, owner }) {
 
     if (count) {
         return (
-            <div className='card-grid'>
+            <div className={styles['card-grid']}>
                 {posts.slice(0, count).map((p) => (
                     <PostArticle key={p._id} post={p} />
                 ))}
@@ -20,7 +22,7 @@ export default function PostsList({ count, owner }) {
         );
     } else if (owner) {
         return (
-            <div className='card-grid'>
+            <div className={styles['card-grid']}>
                 {posts
                     .filter((p) => p._ownerId === owner)
                     .map((p) => (
@@ -30,7 +32,7 @@ export default function PostsList({ count, owner }) {
         );
     } else {
         return (
-            <div className='card-grid'>
+            <div className={styles['card-grid']}>
                 {posts.map((p) => (
                     <PostArticle key={p._id} post={p} />
                 ))}

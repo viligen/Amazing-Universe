@@ -1,5 +1,5 @@
 import NewPostBtn from '../../btns/NewPostBtn';
-import PostsList from '../../posts/PostsList';
+import PostsList from '../../posts/list/PostsList';
 
 export default function MainMyPosts() {
     let ownerId = JSON.parse(sessionStorage.getItem('user'))._id || null;

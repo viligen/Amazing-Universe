@@ -1,5 +1,5 @@
 import NewPostBtn from '../../btns/NewPostBtn';
-import PostsList from '../../posts/PostsList';
+import PostsList from '../../posts/list/PostsList';
 
 export default function MainDashboard() {
     return (

@@ -1,0 +1,26 @@
+.form {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    text-align: left;
+    padding: 3rem 5rem;
+    margin: 3rem auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form input,
+textarea {
+    all: unset;
+    width: 95%;
+    border: 0.1px solid var(--clr-dark-brown);
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: var(--clr-dark-brown);
+}
+.form button {
+    margin-top: 20px;
+}

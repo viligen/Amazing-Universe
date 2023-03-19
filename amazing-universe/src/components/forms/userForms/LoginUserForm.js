@@ -5,6 +5,7 @@ import { userContext } from '../../../context/userContext';
 import { loginUser } from '../../../services/userServices';
 
 import { useForm } from '../../../hooks/useForm';
+import styles from '../Forms.module.css'
 
 export default function LoginUserForm() {
     const { onUserChange } = useContext(userContext);
@@ -50,7 +51,7 @@ export default function LoginUserForm() {
 
     return (
         !currentUser && (
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className={styles.form}>
                 <label htmlFor='email'>Email:</label>
                 <input
                     type='email'

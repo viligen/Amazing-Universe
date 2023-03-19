@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { editPost, getOnePost } from '../../../services/postServices';
 
+import styles from '../Forms.module.css';
+
 export default function EditPostForm() {
     const { postId } = useParams();
     const [formData, setFormdata] = useState({});
@@ -35,7 +37,7 @@ export default function EditPostForm() {
     return post ? (
         <Navigate to={`/posts/${post._id}`} />
     ) : (
-        <form onSubmit={onSubmitHandler}>
+        <form onSubmit={onSubmitHandler} className={styles.form}>
             <label htmlFor='title'>Title:</label>
             <input
                 type='text'
