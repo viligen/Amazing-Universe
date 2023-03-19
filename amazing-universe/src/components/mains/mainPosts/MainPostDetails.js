@@ -1,4 +1,4 @@
-import PostDetails from '../posts/PostDetails';
+import PostDetails from '../../posts/details/PostDetails';
 
 export default function MainDetails() {
     return (

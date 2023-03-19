@@ -1,0 +1,12 @@
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--clr-dark-brown);
+    color: white;
+    min-height: 15vh;
+    align-items: center;
+    margin-top: 2rem;
+}

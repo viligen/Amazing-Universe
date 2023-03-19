@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createPost } from '../../services/postServices';
+import { createPost } from '../../../services/postServices';
 
 export default function CreatePostForm() {
     const navigate = useNavigate();

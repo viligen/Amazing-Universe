@@ -26,10 +26,11 @@
     text-align: left;
 }
 
-
 .cardLarge i {
     font-size: 2rem;
     color: var(--clr-dark-brown);
+    width: 2rem;
+    height: 2rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
 }

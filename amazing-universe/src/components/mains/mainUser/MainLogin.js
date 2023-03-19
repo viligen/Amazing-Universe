@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import LoginUserForm from '../forms/LoginUserForm';
+import LoginUserForm from '../../forms/userForms/LoginUserForm';
 
 export default function MainLogin() {
     return (

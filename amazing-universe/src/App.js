@@ -3,22 +3,22 @@ import { Routes, Route } from 'react-router-dom';
 import { userContext } from './context/userContext';
 import { useState, useEffect } from 'react';
 
-import Footer from './components/common/Footer';
-import Header from './components/common/Header';
-import Main from './components/mains/Main';
-import MainCreatePost from './components/mains/MainCreatePost';
-import MainDashboard from './components/mains/MainDashboard';
-import MainPostDetails from './components/mains/MainPostDetails';
+import Footer from './components/common/footer/Footer';
+import Header from './components/common/header/Header';
+import Main from './components/mains/mainPosts/Main';
+import MainCreatePost from './components/mains/mainPosts/MainCreatePost';
+import MainDashboard from './components/mains/mainPosts/MainDashboard';
+import MainPostDetails from './components/mains/mainPosts/MainPostDetails';
 
-import LogoutUser from './components/LogoutUser';
-import NotFound from './components/404';
-import MainMyPosts from './components/mains/MainMyPosts';
+import LogoutUser from './components/logoutUser/LogoutUser';
+import NotFound from './components/404/404';
+import MainMyPosts from './components/mains/mainUser/MainMyPosts';
 
 import DeletePost from './components/posts/DeletePost';
 import LikePost from './components/posts/LikePost';
-import MainEditPost from './components/mains/MainEditPost';
-import MainLogin from './components/mains/MainLogin';
-import MainRegister from './components/mains/MainRegister';
+import MainEditPost from './components/mains/mainPosts/MainEditPost';
+import MainLogin from './components/mains/mainUser/MainLogin';
+import MainRegister from './components/mains/mainUser/MainRegister';
 
 function App() {
     const [user, setCurrentUser] = useState(sessionStorage.getItem('user'));

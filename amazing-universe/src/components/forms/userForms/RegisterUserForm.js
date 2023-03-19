@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { userContext } from '../../context/userContext';
-import { registerUser } from '../../services/userServices';
+import { userContext } from '../../../context/userContext';
+import { registerUser } from '../../../services/userServices';
 
 export default function RegisterUserForm() {
     const { onUserChange } = useContext(userContext);

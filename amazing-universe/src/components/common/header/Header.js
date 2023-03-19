@@ -1,5 +1,5 @@
 import HeroInfo from './HeroInfo';
-import Nav from './Nav';
+import Nav from '../nav/Nav';
 import { useLocation } from 'react-router-dom';
 
 export default function Header() {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { editPost, getOnePost } from '../../services/postServices';
+import { editPost, getOnePost } from '../../../services/postServices';
 
 export default function EditPostForm() {
     const { postId } = useParams();

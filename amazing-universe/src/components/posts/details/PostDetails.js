@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { userContext } from '../../context/userContext';
-import { getAllLikes, getOwnLike } from '../../services/likeServices';
-import { getOnePost } from '../../services/postServices';
+import { userContext } from '../../../context/userContext';
+import { getAllLikes, getOwnLike } from '../../../services/likeServices';
+import { getOnePost } from '../../../services/postServices';
 import './PostDetails.css';
 
 export default function PostDetails() {
@@ -12,15 +12,13 @@ export default function PostDetails() {
     //     ? JSON.parse(sessionStorage.getItem('user'))
     //     : null;
     console.log(useContext(userContext));
-    let {user} = useContext(userContext);
+    let { user } = useContext(userContext);
     const userId = user ? JSON.parse(user)._id : '';
-
-    
 
     const [post, setPost] = useState(null);
     const [likes, setLikes] = useState(0);
     const [isLiked, setOwnLike] = useState(false);
-    
+
     console.log(user, userId, post?._ownerId);
 
     useEffect(() => {

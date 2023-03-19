@@ -1,0 +1,11 @@
+.postBtn {
+    align-self: center;
+    padding: 5px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--clr-dark-brown);
+    color: white;
+    border-radius: 20px;
+    border: unset;
+    text-decoration: none;
+}

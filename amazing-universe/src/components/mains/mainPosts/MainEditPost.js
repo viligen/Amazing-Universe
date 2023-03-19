@@ -1,4 +1,4 @@
-import EditPostForm from '../forms/EditPostForm';
+import EditPostForm from '../../forms/postForms/EditPostForm';
 
 export default function MainEditPost() {
     return (

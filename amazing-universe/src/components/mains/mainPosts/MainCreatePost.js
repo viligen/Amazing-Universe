@@ -1,4 +1,4 @@
-import CreatePostForm from '../forms/CreatePostForm';
+import CreatePostForm from '../../forms/postForms/CreatePostForm';
 
 export default function MainCreatePost() {
     return (

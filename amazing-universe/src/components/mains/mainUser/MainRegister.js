@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import RegisterUserForm from '../forms/RegisterUserForm';
+import RegisterUserForm from '../../forms/userForms/RegisterUserForm';
 
 export default function MainRegister() {
     return (

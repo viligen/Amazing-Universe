@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react';
-import { userContext } from '../context/userContext';
+import { userContext } from '../../context/userContext';
 import { useNavigate } from 'react-router-dom';
-import { logoutUser } from '../services/userServices';
+import { logoutUser } from '../../services/userServices';
 
 export default function LogoutUser() {
     const { onUserChange } = useContext(userContext);
