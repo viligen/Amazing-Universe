@@ -68,7 +68,7 @@ export default function EditPostForm() {
             />
             <label htmlFor='imageUrl'>Image URL:</label>
             <input
-                type='text'
+                type='url'
                 id='imageUrl'
                 name='imageUrl'
                 defaultValue={currentPost?.imageUrl}

@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
-// import { userContext } from '../../context/userContext';
+import { useEffect, useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { userContext } from '../../context/userContext';
 import { registerUser } from '../../services/userServices';
 
 export default function RegisterUserForm() {
+    const { onUserChange } = useContext(userContext);
+    const navigate = useNavigate();
     const [formData, setFormdata] = useState({});
-    const [user, setUser] = useState('');
-    // const ctxUser = userContext(user);
-    // setUser(userContext)
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         if (formData.password) {
@@ -15,12 +15,14 @@ export default function RegisterUserForm() {
                 if (result) {
                     setUser(result);
                     sessionStorage.setItem('user', JSON.stringify(result));
+                    onUserChange(JSON.stringify(result));
+                    navigate('/dashboard', { replace: true });
                 } else {
                     alert('Please register a brand new user!');
                 }
             });
         }
-    }, [formData]);
+    }, [formData, navigate, onUserChange]);
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -38,37 +40,37 @@ export default function RegisterUserForm() {
             setFormdata({ email, password });
         }
     };
-    return user ? (
-        <Navigate to='/' replace />
-    ) : (
-        <form onSubmit={onSubmitHandler}>
-            <label htmlFor='email'>Email:</label>
-            <input
-                type='email'
-                id='emaile'
-                name='email'
-                defaultValue=''
-                required={true}
-            />
-            <label htmlFor='password'>Password:</label>
-            <input
-                type='password'
-                id='password'
-                name='password'
-                defaultValue=''
-                required={true}
-            />
-            <label htmlFor='repass'>Repeat Password:</label>
-            <input
-                type='password'
-                id='repass'
-                name='repass'
-                defaultValue=''
-                required={true}
-            />
-            <button type='submit' className='postBtn'>
-                Register
-            </button>
-        </form>
+    return (
+        !user && (
+            <form onSubmit={onSubmitHandler}>
+                <label htmlFor='email'>Email:</label>
+                <input
+                    type='email'
+                    id='email'
+                    name='email'
+                    defaultValue=''
+                    required={true}
+                />
+                <label htmlFor='password'>Password:</label>
+                <input
+                    type='password'
+                    id='password'
+                    name='password'
+                    defaultValue=''
+                    required={true}
+                />
+                <label htmlFor='repass'>Repeat Password:</label>
+                <input
+                    type='password'
+                    id='repass'
+                    name='repass'
+                    defaultValue=''
+                    required={true}
+                />
+                <button type='submit' className='postBtn'>
+                    Register
+                </button>
+            </form>
+        )
     );
 }

@@ -5,8 +5,12 @@ import { deletePost } from '../../services/postServices';
 export default function DeletePost() {
     const { postId } = useParams();
     useEffect(() => {
-        if (postId) {
-            alert('You are about to delete this post. Please, confirm!');
+        if (
+            postId &&
+            window.confirm(
+                'You are about to delete this post. Please, confirm!'
+            )
+        ) {
             deletePost(postId).then((result) => console.log());
         }
     }, [postId]);

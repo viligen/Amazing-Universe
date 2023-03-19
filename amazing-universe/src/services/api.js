@@ -39,6 +39,7 @@ export async function requestFunc(method, url, data) {
         return await resp.json();
     } catch (err) {
         console.log(err.message);
+        alert('Something went wrong. Try again!');
         // throw err;
     }
 }
