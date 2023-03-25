@@ -19,8 +19,8 @@ import LikePost from './components/posts/LikePost';
 import MainEditPost from './components/mains/mainPosts/MainEditPost';
 import MainLogin from './components/mains/mainUser/MainLogin';
 import MainRegister from './components/mains/mainUser/MainRegister';
-import OwnershipRequired from './components/common/routeGuards/OwnershipRequired';
-import AuthUserRequired from './components/common/routeGuards/AuthUserRequired';
+import OwnershipRequired from './components/routeGuards/OwnershipRequired';
+import AuthUserRequired from './components/routeGuards/AuthUserRequired';
 
 function App() {
     const [user, setCurrentUser] = useState(sessionStorage.getItem('user'));

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import { userContext } from '../../../context/userContext';
+import { userContext } from '../../context/userContext';
 
 export default function OwnershipRequired() {
     const { state } = useLocation();
@@ -9,12 +9,8 @@ export default function OwnershipRequired() {
     const authUserId = user ? JSON.parse(user)._id : '';
 
     // console.log(authUserId, ownerId);
-    if (authUserId) {
-        if (ownerId !== authUserId) {
-            return <Navigate to='/' replace />;
-        } else {
-            return <Outlet />;
-        }
+    if (authUserId && ownerId === authUserId) {
+        return <Outlet />;
     } else {
         return <Navigate to='/' replace />;
     }
