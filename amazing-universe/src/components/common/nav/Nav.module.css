@@ -10,6 +10,6 @@
 .nav ul {
     display: flex;
     justify-content: space-between;
-    min-width: 30rem;
+    min-width: 35rem;
     align-items: center;
 }

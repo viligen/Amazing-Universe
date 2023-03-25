@@ -2,7 +2,7 @@ import { requestFunc } from './api';
 
 export async function loginUser(data) {
     const userData = await requestFunc(`POST`, `/users/login`, data);
-    
+
     return await userData;
 }
 
@@ -13,5 +13,10 @@ export async function registerUser(data) {
 
 export async function logoutUser() {
     const userData = await requestFunc(`GET`, `/users/logout`);
+    return await userData;
+}
+
+export async function getProfile() {
+    const userData = await requestFunc(`GET`, `/users/me`);
     return await userData;
 }

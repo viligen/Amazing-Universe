@@ -21,6 +21,7 @@ import MainLogin from './components/mains/mainUser/MainLogin';
 import MainRegister from './components/mains/mainUser/MainRegister';
 import OwnershipRequired from './components/routeGuards/OwnershipRequired';
 import AuthUserRequired from './components/routeGuards/AuthUserRequired';
+import MainProfile from './components/mains/mainUser/profile/MainProfile';
 
 function App() {
     const [user, setCurrentUser] = useState(sessionStorage.getItem('user'));
@@ -44,6 +45,7 @@ function App() {
                     <Route element={<AuthUserRequired />}>
                         <Route path='/logout' element={<LogoutUser />} />
                         <Route path='/myposts' element={<MainMyPosts />} />
+                        <Route path='/myprofile' element={<MainProfile />} />
 
                         <Route
                             path='/posts/create'

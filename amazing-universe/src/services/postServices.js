@@ -42,3 +42,11 @@ export async function getMyPosts(userId) {
     );
     return await postsData;
 }
+
+export async function getMyPostsCount(userId) {
+    const postsData = await requestFunc(
+        `GET`,
+        `/data/posts?where=_ownerId%3D%22${userId}%22&count`
+    );
+    return await postsData;
+}

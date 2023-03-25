@@ -43,6 +43,16 @@ export default function Nav(props) {
                         </li>
                         <li>
                             <NavLink
+                                to='/myprofile'
+                                className={({ isActive }) =>
+                                    isActive ? styles.active : ''
+                                }
+                            >
+                                My Profile
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
                                 to='/logout'
                                 className={({ isActive }) =>
                                     isActive ? styles.active : ''

@@ -23,3 +23,12 @@ export async function actionLike(postId) {
     });
     return await userData;
 }
+
+export async function getTotalLikesPerUser(userId) {
+    const likes = await requestFunc(
+        `GET`,
+        `/data/likes?where=_ownerId%3D%22${userId}%22&count`
+    );
+
+    return await likes;
+}
