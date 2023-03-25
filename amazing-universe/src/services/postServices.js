@@ -8,17 +8,25 @@ export async function getAllPosts() {
     return await postsData;
 }
 
-export async function getOnePost(post_id) {
-    const postData = await requestFunc(`GET`, `/data/posts/${post_id}`);
+export async function getLimitedPosts(count) {
+    const postsData = await requestFunc(
+        `GET`,
+        `/data/posts?sortBy=_createdOn%20desc&offset=0&pageSize=${count}`
+    );
+    return await postsData;
+}
+
+export async function getOnePost(postId) {
+    const postData = await requestFunc(`GET`, `/data/posts/${postId}`);
     return await postData;
 }
 
-export async function editPost(post_id, data) {
-    const postData = await requestFunc(`PUT`, `/data/posts/${post_id}`, data);
+export async function editPost(postId, data) {
+    const postData = await requestFunc(`PUT`, `/data/posts/${postId}`, data);
     return await postData;
 }
-export async function deletePost(post_id) {
-    const postData = await requestFunc(`DELETE`, `/data/posts/${post_id}`);
+export async function deletePost(postId) {
+    const postData = await requestFunc(`DELETE`, `/data/posts/${postId}`);
     return await postData;
 }
 
