@@ -24,3 +24,12 @@ textarea {
 .form button {
     margin-top: 20px;
 }
+.form input.green,
+textarea.green {
+    border: 3px solid rgb(39, 126, 39);
+}
+
+.form input.red,
+textarea.red {
+    border: 3px solid rgb(171, 37, 28);
+}

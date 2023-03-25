@@ -14,7 +14,7 @@ import LogoutUser from './components/logoutUser/LogoutUser';
 import NotFound from './components/404/404';
 import MainMyPosts from './components/mains/mainUser/MainMyPosts';
 
-import DeletePost from './components/posts/DeletePost';
+import DeletePost from './components/posts/delete/DeletePost';
 import LikePost from './components/posts/LikePost';
 import MainEditPost from './components/mains/mainPosts/MainEditPost';
 import MainLogin from './components/mains/mainUser/MainLogin';

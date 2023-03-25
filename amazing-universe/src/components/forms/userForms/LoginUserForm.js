@@ -5,7 +5,8 @@ import { userContext } from '../../../context/userContext';
 import { loginUser } from '../../../services/userServices';
 
 import { useForm } from '../../../hooks/useForm';
-import styles from '../Forms.module.css'
+import styles from '../Forms.module.css';
+import { isAllRequiredOK } from '../../../utils/formValidators';
 
 export default function LoginUserForm() {
     const { onUserChange } = useContext(userContext);
@@ -15,8 +16,8 @@ export default function LoginUserForm() {
     const [formData, setFormdata] = useState({});
 
     const onSubmitHandler = (formValues) => {
-        if (Object.values(formValues).some((v) => v.trim() === '')) {
-            alert('Fill in all fields!');
+        if (!isAllRequiredOK(Object.values(formValues))) {
+            alert('Fill in all required fields!');
             return;
         } else {
             setFormdata({
@@ -32,12 +33,10 @@ export default function LoginUserForm() {
             password: '',
         },
         onSubmitHandler
-        // }, (values)=>{console.log(values)}
     );
 
     useEffect(() => {
         if (formData.password && formData.email) {
-            console.log(formData);
             loginUser(formData).then((result) => {
                 if (result) {
                     setCurrentUser(JSON.stringify(result));

@@ -1,7 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
+import { userContext } from '../../../context/userContext';
+import { useContext } from 'react';
 
 export default function Nav(props) {
+    const { user } = useContext(userContext);
+
     return (
         <nav>
             <ul className='list'>
@@ -25,7 +29,7 @@ export default function Nav(props) {
                         Dashboard
                     </NavLink>
                 </li>
-                {sessionStorage.getItem('user') && (
+                {user && (
                     <>
                         <li>
                             <NavLink
@@ -50,7 +54,7 @@ export default function Nav(props) {
                     </>
                 )}
 
-                {!sessionStorage.getItem('user') && (
+                {!user && (
                     <>
                         <li>
                             <NavLink

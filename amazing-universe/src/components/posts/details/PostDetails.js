@@ -8,18 +8,16 @@ import './PostDetails.css';
 
 export default function PostDetails() {
     let { postId } = useParams();
-    // let user = sessionStorage.getItem('user')
-    //     ? JSON.parse(sessionStorage.getItem('user'))
-    //     : null;
-    console.log(useContext(userContext));
-    let { user } = useContext(userContext);
+
+    // console.log(useContext(userContext));
+    const { user } = useContext(userContext);
     const userId = user ? JSON.parse(user)._id : '';
 
     const [post, setPost] = useState(null);
     const [likes, setLikes] = useState(0);
     const [isLiked, setOwnLike] = useState(false);
 
-    console.log(user, userId, post?._ownerId);
+    // console.log(user, userId, post?._ownerId);
 
     useEffect(() => {
         getOnePost(postId).then((postData) => {
@@ -61,10 +59,19 @@ export default function PostDetails() {
             )}
             {user && post._ownerId === userId && (
                 <>
-                    <Link to={`/posts/${postId}/edit`}>
+                    <Link
+                        to={`/posts/${postId}/edit`}
+                        state={{ ownerId: post._ownerId }}
+                    >
                         <i className='fas fa-edit'></i>
                     </Link>
-                    <Link to={`/posts/${postId}/delete`}>
+                    <Link
+                        to={`/posts/${postId}/delete`}
+                        state={{
+                            ownerId: post._ownerId,
+                            postTitle: post.title,
+                        }}
+                    >
                         <i className='fas fa-trash-alt'></i>
                     </Link>
                 </>
@@ -74,6 +81,8 @@ export default function PostDetails() {
             </Link>
         </article>
     ) : (
-        <p>Loading...</p>
+        <p>
+            <b>Loading post...</b>
+        </p>
     );
 }

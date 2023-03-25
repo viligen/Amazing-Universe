@@ -26,11 +26,13 @@ export default function PostsList({ count, owner }) {
         }
     }, [count, owner]);
 
-    return (
+    return posts.length !== 0 ? (
         <div className={styles['card-grid']}>
             {posts.map((p) => (
                 <PostArticle key={p._id} post={p} />
             ))}
         </div>
+    ) : (
+        <p className={styles.noPosts}>No Posts to Show</p>
     );
 }

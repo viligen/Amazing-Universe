@@ -39,7 +39,9 @@ export async function requestFunc(method, url, data) {
         return await resp.json();
     } catch (err) {
         console.log(err.message);
-        alert('Something went wrong. Try again!');
+        alert(
+            'Something went wrong. Check your email and password and try again!'
+        );
         // throw err;
     }
 }
