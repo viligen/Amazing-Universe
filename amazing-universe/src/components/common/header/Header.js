@@ -9,8 +9,8 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <img src='header.jpg' alt='hero' />
-            <div className='hero'>
+            <img src='./header.jpg' alt='hero' />
+            <div className={styles.hero}>
                 <h1>Amazing Universe</h1>
                 <Nav />
             </div>

@@ -7,7 +7,7 @@ export default function Nav(props) {
     const { user } = useContext(userContext);
 
     return (
-        <nav>
+        <nav className={styles.nav}>
             <ul className='list'>
                 <li>
                     <NavLink

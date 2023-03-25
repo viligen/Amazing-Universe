@@ -2,3 +2,14 @@
     font-weight: 600;
     font-size: 1.8rem;
 }
+.nav {
+    font-size: 1.4rem;
+
+    margin-left: auto;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 30rem;
+    align-items: center;
+}

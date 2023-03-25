@@ -7,7 +7,7 @@ export default function DeletePost() {
     const { postId } = useParams();
     const { state } = useLocation();
     const [isConfirmed, setIsConfirmed] = useState(false);
-    const postTitle = state.postTitle;
+    const postTitle = state ? state.postTitle : '';
     const navigate = useNavigate();
     useEffect(() => {
         if (postId && isConfirmed) {
