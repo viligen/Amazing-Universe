@@ -5,6 +5,11 @@
     overflow: hidden;
     color: white;
     /* background-color: var(--clr-dark-brown); */
+    background-image: url('./header.jpg');
+    background-color: var(--clr-dark-brown);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .header button {
     cursor: pointer;
