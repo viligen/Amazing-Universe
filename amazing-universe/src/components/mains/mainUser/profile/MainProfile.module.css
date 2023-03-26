@@ -25,3 +25,12 @@
     padding: 0 3rem;
     text-align: left;
 }
+
+.lastSeen {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow-x: scroll;
+    margin: 4rem 0;
+    padding-bottom: 1rem;;
+}

@@ -4,9 +4,14 @@
     bottom: 0px;
     display: flex;
     justify-content: space-around;
-    background-color: var(--clr-dark-brown);
+    /* background-color: var(--clr-dark-brown); */
     color: white;
     min-height: 15vh;
     align-items: center;
     margin-top: 2rem;
+    background-image: url('./footer.jpg');
+    background-color: var(--clr-dark-brown);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
 }

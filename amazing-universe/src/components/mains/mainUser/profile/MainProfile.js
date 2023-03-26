@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { userContext } from '../../../../context/userContext';
 import { getTotalLikesPerUser } from '../../../../services/likeServices';
 import { getMyPostsCount } from '../../../../services/postServices';
+import { getLastSeen } from '../../../../utils/lastSeenHelper';
+import SmallPost from '../../../posts/smallCard/SmallPost';
 import styles from './MainProfile.module.css';
 
 export default function MainProfile() {
@@ -12,6 +14,7 @@ export default function MainProfile() {
 
     const [ownPostsCount, setPostsCount] = useState(0);
     const [totalLikes, setTotalLikes] = useState(0);
+    const [lastSeen, setLastSeen] = useState([]);
 
     useEffect(() => {
         if (user) {
@@ -21,6 +24,9 @@ export default function MainProfile() {
             getTotalLikesPerUser(userId).then((count) => {
                 setTotalLikes(count);
             });
+            const last = getLastSeen();
+            const sorted_keys = Object.keys(last).sort((a, b) => b - a);
+            setLastSeen(sorted_keys.map((key) => last[key]));
         }
     }, [user, userId]);
     return (
@@ -47,6 +53,16 @@ export default function MainProfile() {
                         Log Out
                     </Link>
                 </article>
+            </section>
+            <section>
+                <h3>Recently Seen Posts</h3>
+                <div className={styles.lastSeen}>
+                    {lastSeen.length !== 0 ? (
+                        lastSeen.map((p) => <SmallPost post={p} key={p._id} />)
+                    ) : (
+                        <p>No Posts Seen Lately</p>
+                    )}
+                </div>
             </section>
         </main>
     );

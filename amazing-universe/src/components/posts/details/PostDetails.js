@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { userContext } from '../../../context/userContext';
 import { getAllLikes, getOwnLike } from '../../../services/likeServices';
 import { getOnePost } from '../../../services/postServices';
+import { addToLastSeen } from '../../../utils/lastSeenHelper';
 import './PostDetails.css';
 
 export default function PostDetails() {
@@ -22,6 +23,7 @@ export default function PostDetails() {
     useEffect(() => {
         getOnePost(postId).then((postData) => {
             setPost(postData);
+            addToLastSeen(postData);
         });
         getAllLikes(postId).then((count) => {
             setLikes(count);
