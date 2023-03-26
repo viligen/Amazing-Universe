@@ -18,12 +18,18 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 ### CONTENT:
 
 'Amazing Universe' SPA consists of Components and their CSS modules, forming page views. It has 6 dynamic pages:
-####- Home page: showing last 3 of the most recent posts;
-####- Dashboard page: showing the full collection of posts, ordered by last published, with search options (by title or source)
-####- My Posts page: showing users own posts with search options (by title or source)
-####- My Profile page: showing user info, total number of own posts (being also a link to the reletaed collection- My Posts), total likes the user has made as well as a collection of recently seen posts (being also links to each visisted post)
-####- Details page: showing a detailed info about a post. If the user is authenticated and is the owner of the publication, they get access to edit and delete functionality but cannot like their own posts. Other authenticated users can only like once per post and have no access to edit and delete it. Anonymous users have no access to this page.
-####- Edit page: showing the actual post info and giving the owner the possibility to update it.
+
+#### - Home page: showing last 3 of the most recent posts;
+
+#### - Dashboard page: showing the full collection of posts, ordered by last published, with search options (by title or source)
+
+#### - My Posts page: showing users own posts with search options (by title or source)
+
+#### - My Profile page: showing user info, total number of own posts (being also a link to the reletaed collection- My Posts), total likes the user has made as well as a collection of recently seen posts (being also links to each visisted post)
+
+#### - Details page: showing a detailed info about a post. If the user is authenticated and is the owner of the publication, they get access to edit and delete functionality but cannot like their own posts. Other authenticated users can only like once per post and have no access to edit and delete it. Anonymous users have no access to this page.
+
+#### - Edit page: showing the actual post info and giving the owner the possibility to update it.
 
 'Amazing Universe' SPA offers a Persistent User State.
 
