@@ -33,10 +33,12 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 'Amazing Universe' SPA offers a Persistent User State.
 
-Anonymous Users:
+#### Anonymous Users:
+
 Have access to Home page, Dashboard page, Login page and Register page.They can also use the search implementation to search through larger collections. They cannot see Details pages, Profile related pages and cannot create new posts as well as cannot edit and delete content.
 
-Authenticated Users:
+#### Authenticated Users:
+
 Authenticated users have access to Home page, Dashboard Page, My Posts page, My Profile page, Create Post page as well as logout option.
 Edit page and Delete page are accessible for post owners only.
 
