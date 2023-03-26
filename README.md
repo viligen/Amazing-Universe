@@ -29,7 +29,7 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 #### - Details page: showing a detailed info about a post. If the user is authenticated and is the owner of the publication, they get access to edit and delete functionality but cannot like their own posts. Other authenticated users can only like once per post and have no access to edit and delete it. Anonymous users have no access to this page.
 
-#### - Edit page: showing the actual post info and giving the owner the possibility to update it.
+#### - Edit page: showing the actual post info and giving owner the possibility to update it.
 
 'Amazing Universe' SPA offers a Persistent User State.
 
