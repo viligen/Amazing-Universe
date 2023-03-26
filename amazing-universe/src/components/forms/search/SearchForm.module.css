@@ -1,0 +1,47 @@
+.form {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: left;
+    padding: 3rem 5rem;
+    margin: 3rem auto;
+    border-radius: unset;
+    box-shadow: unset;
+}
+.form input,
+textarea {
+    all: unset;
+    width: 95%;
+    border: 0.1px solid var(--clr-dark-brown);
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: var(--clr-dark-brown);
+}
+.reset {
+    all: unset;
+    position: relative;
+    margin-left: -2.5rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: unset;
+    padding-bottom: 6px;
+}
+.search {
+    align-self: center;
+    /* height: 2.5rem; */
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    margin-top: unset;
+    font-weight: bold;
+    background-color: var(--clr-dark-brown);
+    color: white;
+    border-radius: 20px;
+    border: unset;
+    text-decoration: none;
+}

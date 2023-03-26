@@ -28,9 +28,10 @@
 
 .lastSeen {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     gap: 2rem;
     overflow-x: scroll;
     margin: 4rem 0;
-    padding-bottom: 1rem;;
+    padding-bottom: 1rem;
 }
