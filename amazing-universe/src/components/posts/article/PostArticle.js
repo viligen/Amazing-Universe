@@ -8,7 +8,7 @@ export default function PostArticle({ post }) {
     return (
         <article className={styles.card}>
             <img src={post.imageUrl} alt={`${post.title} img`} />
-            <h4>{post.title}</h4>
+            <h4 className = {styles.title}>{post.title}</h4>
             <p>{post.description}</p>
 
             <Link

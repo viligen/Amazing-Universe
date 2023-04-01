@@ -30,7 +30,7 @@ function App() {
     };
 
     useEffect(() => {
-        // console.log(currentUser, sessionUser);
+        // console.log(user);
     }, [user]);
     return (
         <userContext.Provider value={{ user, onUserChange }}>

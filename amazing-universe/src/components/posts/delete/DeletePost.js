@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { useParams, useLocation, useNavigate, Link } from 'react-router-dom';
 import { deletePost } from '../../../services/postServices';
 import styles from './DeletePost.module.css';
 
@@ -31,6 +31,9 @@ export default function DeletePost() {
             >
                 Confirm to Delete
             </button>
+            <Link to={`/posts/${postId}`} className={styles.undo}>
+                <i className='fas fa-undo'></i>
+            </Link>
         </article>
     );
 }
