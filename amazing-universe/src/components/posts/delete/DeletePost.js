@@ -20,9 +20,11 @@ export default function DeletePost() {
     return (
         <article className={styles.cardLarge}>
             <p className={styles.msg}>
-                You are about to delete post with title :<br></br> "{postTitle}"
+                You are about to delete your post with title:
             </p>
-            <p className={styles.confirmMsg}>Please, confirm!</p>
+            <h2 className={styles.title}>{postTitle}</h2>
+
+            <p className={styles.confirmMsg}>Please, confirm or go back to details!</p>
             <button
                 className='postBtn'
                 onClick={() => {
