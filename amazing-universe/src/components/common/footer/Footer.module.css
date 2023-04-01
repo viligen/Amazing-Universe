@@ -15,3 +15,42 @@
     background-size: cover;
     /* background-position: center; */
 }
+
+.footer-flex {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.footer-flex ul {
+    font-size: 1rem;
+}
+.footer-flex ul li {
+    padding-bottom: 10px;
+}
+
+.footer ul.icons {
+    align-self: center;
+}
+
+.footer ul.icons div.icons-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.footer ul.icons i {
+    align-self: center;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width:720px) {
+    .footer{
+        flex-direction: column;
+        gap:1rem;
+    }
+    .footer-flex{
+        flex-direction: column;
+        gap:1rem;
+    }
+    
+}

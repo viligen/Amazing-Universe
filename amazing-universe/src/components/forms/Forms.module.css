@@ -33,3 +33,15 @@ textarea.green {
 textarea.red {
     border: 3px solid rgb(237, 58, 46);
 }
+
+@media screen and (max-width: 1450px) {
+    .form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .form {
+        width: 100%;
+    }
+}

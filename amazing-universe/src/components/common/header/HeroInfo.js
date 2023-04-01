@@ -1,9 +1,11 @@
 import NewPostBtn from '../../btns/NewPostBtn';
 
+import styles from './Header.module.css';
+
 export default function HeroInfo() {
     return (
-        <div className='main-info'>
-            <h2 className='larger'>
+        <div className={styles['main-info']}>
+            <h2 className={styles.larger}>
                 Share your favourite<br></br>
                 space photography, facts and thoughts
             </h2>

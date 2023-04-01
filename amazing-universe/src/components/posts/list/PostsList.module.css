@@ -47,14 +47,14 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
     .card-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1050px) {
     .card-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

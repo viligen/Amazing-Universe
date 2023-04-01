@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <h1>Amazing Universe</h1>
-            <section className='footer-flex'>
+            <section className={styles['footer-flex']}>
                 <ul className='list'>
                     <li>
                         <b>Contacts</b>

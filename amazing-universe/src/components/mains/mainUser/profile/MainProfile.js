@@ -31,7 +31,7 @@ export default function MainProfile() {
     }, [user, userId]);
     return (
         <main>
-            <section>
+            <section className={styles.section}>
                 <h3>My Profile</h3>
 
                 <article className={styles.cardLarge}>
@@ -54,7 +54,7 @@ export default function MainProfile() {
                     </Link>
                 </article>
             </section>
-            <section>
+            <section className={styles.section}>
                 <h3>Recently Seen Posts</h3>
                 <div className={styles.lastSeen}>
                     {lastSeen.length !== 0 ? (

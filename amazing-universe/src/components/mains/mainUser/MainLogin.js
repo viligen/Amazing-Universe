@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 
 import LoginUserForm from '../../forms/userForms/LoginUserForm';
 
+import styles from '../Mains.module.css';
+
 export default function MainLogin() {
     return (
         <main>
-            <section>
+            <section className={styles.section}>
                 <h3>User Authentication</h3>
                 <LoginUserForm />
                 <p>

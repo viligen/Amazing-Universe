@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import RegisterUserForm from '../../forms/userForms/RegisterUserForm';
 
+import styles from '../Mains.module.css'
+
 export default function MainRegister() {
     return (
         <main>
-            <section>
+            <section className={styles.section}>
                 <h3>User Registration</h3>
                 <RegisterUserForm />
                 <p>

@@ -35,17 +35,7 @@
     margin-right: 15px;
     font-size: 1.5rem;
 }
-/* .hero nav {
-    font-size: 1.4rem;
-    
-    margin-left: auto;
-} */
-/* .hero nav ul {
-    display: flex;
-    justify-content: space-between;
-    min-width: 30rem;
-    align-items: center;
-} */
+
 .hero button,
 .main-info button,
 .postBtn {
@@ -76,4 +66,26 @@
 }
 .main-info p:last-of-type {
     margin-bottom: 40px;
+}
+
+@media screen and (max-width: 990px) {
+    .main-info .larger {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .main-info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hero {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 2rem 5rem;
+    }
 }

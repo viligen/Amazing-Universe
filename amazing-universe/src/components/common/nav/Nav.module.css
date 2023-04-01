@@ -19,3 +19,16 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 720px) {
+    .nav{
+        margin: unset;
+        margin-top:1rem;
+    }
+    .nav ul{
+        min-width: 10rem;
+        padding: unset;
+        margin: unset;
+        align-self: start;
+    }
+}
