@@ -46,3 +46,18 @@
     font-size: 2rem;
     font-weight: 500;
 }
+
+@media screen and (max-width: 1250px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 940px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}

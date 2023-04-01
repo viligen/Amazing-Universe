@@ -13,6 +13,7 @@ export default function SearchForm({ onSubmit }) {
             <button type='reset' className={styles.reset}>
                 x
             </button>
+
             <button type='submit' className={styles.search}>
                 Search
             </button>

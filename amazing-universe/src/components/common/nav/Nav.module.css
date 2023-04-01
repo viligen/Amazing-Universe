@@ -13,3 +13,9 @@
     min-width: 35rem;
     align-items: center;
 }
+
+@media screen and (max-width: 960px) {
+    .nav ul {
+        flex-direction: column;
+    }
+}
