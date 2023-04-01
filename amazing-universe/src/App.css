@@ -1,6 +1,13 @@
 @import url('reset.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 
+:root {
+    --clr-dark-brown: #370411;
+    --clr-lighter-hover: #561a29;
+
+    --padding-x: 15rem;
+}
+
 .App {
     text-align: center;
 }
@@ -38,12 +45,6 @@
     to {
         transform: rotate(360deg);
     }
-}
-
-:root {
-    --clr-dark-brown: #370411;
-
-    --padding-x: 15rem;
 }
 
 /* text-shadow: 1px 1px 2px pink;
@@ -109,6 +110,12 @@ div.main-info button,
     border-radius: 20px;
     border: unset;
     text-decoration: none;
+}
+div.main-info button:hover,
+.postBtn:hover {
+    background-color: var(--clr-lighter-hover);
+    font-weight: bolder;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.main-info {
