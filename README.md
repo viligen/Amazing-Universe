@@ -63,7 +63,7 @@ My own HTML and CSS. Images thanks to NASA and PixaBay. Their official links can
 
 ### UX/UI:
 
-Responsive design, Active link, Form validation notifications by colors, Detailed placeholders, Delete confirmation
+Responsive design - media screen queries, Active link, Form validation notifications by colors, Detailed placeholders, Delete confirmation
 
 ##### DISCLAIMER:
 
