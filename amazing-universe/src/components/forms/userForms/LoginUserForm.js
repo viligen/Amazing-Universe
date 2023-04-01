@@ -51,7 +51,7 @@ export default function LoginUserForm() {
     return (
         !currentUser && (
             <form onSubmit={onSubmit} className={styles.form}>
-                <label htmlFor='email'>Email:</label>
+                <label htmlFor='email'>Email*:</label>
                 <input
                     type='email'
                     id='email'
@@ -60,7 +60,7 @@ export default function LoginUserForm() {
                     onChange={onChangeHandler}
                     required={true}
                 />
-                <label htmlFor='password'>Password:</label>
+                <label htmlFor='password'>Password*:</label>
                 <input
                     type='password'
                     id='password'
@@ -72,6 +72,7 @@ export default function LoginUserForm() {
                 <button type='submit' className='postBtn'>
                     Login
                 </button>
+                <p>*All fields are required</p>
             </form>
         )
     );

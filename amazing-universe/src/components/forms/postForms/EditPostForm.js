@@ -38,7 +38,7 @@ export default function EditPostForm() {
         <Navigate to={`/posts/${post._id}`} />
     ) : (
         <form onSubmit={onSubmitHandler} className={styles.form}>
-            <label htmlFor='title'>Title:</label>
+            <label htmlFor='title'>Title*:</label>
             <input
                 type='text'
                 id='title'
@@ -53,7 +53,7 @@ export default function EditPostForm() {
                 name='description'
                 defaultValue={currentPost?.description}
             />
-            <label htmlFor='author'>Source:</label>
+            <label htmlFor='author'>Source*:</label>
             <input
                 type='text'
                 id='author'
@@ -68,7 +68,7 @@ export default function EditPostForm() {
                 name='date'
                 defaultValue={currentPost?.date}
             />
-            <label htmlFor='imageUrl'>Image URL:</label>
+            <label htmlFor='imageUrl'>Image URL*:</label>
             <input
                 type='url'
                 id='imageUrl'

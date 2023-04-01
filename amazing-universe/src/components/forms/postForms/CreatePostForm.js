@@ -68,13 +68,13 @@ export default function CreatePostForm() {
     return (
         !post && (
             <form onSubmit={onSubmit} className={styles.form}>
-                <label htmlFor='title'>Title:</label>
+                <label htmlFor='title'>Title*:</label>
                 <input
                     type='text'
                     id='title'
                     name='title'
                     value={formValues.title}
-                    placeholder='Title is required and cannont be empty'
+                    placeholder='Title is required and cannot be empty...'
                     required={true}
                     onChange={onChangeHandler}
                 />
@@ -86,13 +86,13 @@ export default function CreatePostForm() {
                     value={formValues.description}
                     onChange={onChangeHandler}
                 />
-                <label htmlFor='author'>Source:</label>
+                <label htmlFor='author'>Source*:</label>
                 <input
                     type='text'
                     id='author'
                     name='author'
                     value={formValues.author}
-                    placeholder='Source is required and cannont be empty'
+                    placeholder='Source is required and cannot be empty...'
                     required={true}
                     onChange={onChangeHandler}
                 />
@@ -104,7 +104,7 @@ export default function CreatePostForm() {
                     value={formValues.date}
                     onChange={onChangeHandler}
                 />
-                <label htmlFor='imageUrl'>Image URL:</label>
+                <label htmlFor='imageUrl'>Image URL*:</label>
                 <input
                     type='url'
                     id='imageUrl'
@@ -117,6 +117,7 @@ export default function CreatePostForm() {
                 <button type='submit' className='postBtn'>
                     Create
                 </button>
+                <p>*Required fields</p>
             </form>
         )
     );

@@ -57,7 +57,7 @@ export default function RegisterUserForm() {
     return (
         !user && (
             <form onSubmit={onSubmit} className={styles.form}>
-                <label htmlFor='email'>Email:</label>
+                <label htmlFor='email'>Email*:</label>
                 <input
                     type='email'
                     id='email'
@@ -66,7 +66,7 @@ export default function RegisterUserForm() {
                     required={true}
                     onChange={onChangeHandler}
                 />
-                <label htmlFor='password'>Password:</label>
+                <label htmlFor='password'>Password*:</label>
                 <input
                     type='password'
                     id='password'
@@ -75,7 +75,7 @@ export default function RegisterUserForm() {
                     required={true}
                     onChange={onChangeHandler}
                 />
-                <label htmlFor='repass'>Repeat Password:</label>
+                <label htmlFor='repass'>Repeat Password*:</label>
                 <input
                     type='password'
                     id='repass'
@@ -87,6 +87,7 @@ export default function RegisterUserForm() {
                 <button type='submit' className='postBtn'>
                     Register
                 </button>
+                <p>*All fields are required</p>
             </form>
         )
     );
