@@ -17,19 +17,21 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 ### CONTENT:
 
-'Amazing Universe' SPA consists of Components and their CSS modules, forming page views. It has 6 dynamic pages:
+'Amazing Universe' SPA consists of Components and their CSS modules, forming page views. It has 7 dynamic pages:
 
-#### - Home page: showing last 3 of the most recent posts;
+#### - Home page: showing last 3 of the most recent posts, ordered by last published;
 
 #### - Dashboard page: showing the full collection of posts, ordered by last published, with search options (by title or source)
 
-#### - My Posts page: showing users own posts with search options (by title or source)
+#### - My Posts page: showing users own posts with search options (by title or source), ordered by last published
 
-#### - My Profile page: showing user info, total number of own posts (being also a link to the reletaed collection- My Posts), total likes the user has made as well as a collection of recently seen posts (being also links to each visisted post)
+#### - My Profile page: showing user info, total number of own posts (being also a link to the reletaed collection- My Posts), total likes the user has made as well as a collection of recently seen posts (being also links to each visisted post), ordered by last seen
 
 #### - Details page: showing a detailed info about a post. If the user is authenticated and is the owner of the publication, they get access to edit and delete functionality but cannot like their own posts. Other authenticated users can only like once per post and have no access to edit and delete it. Anonymous users have no access to this page.
 
 #### - Edit page: showing the actual post info and giving owner the possibility to update it.
+
+#### - Delete page: showing the post title and a warning message. It gives owner the possibility to delete it or cancel the action.
 
 'Amazing Universe' SPA offers a Persistent User State.
 
@@ -63,6 +65,6 @@ My own HTML and CSS. Images thanks to NASA and PixaBay. Their official links can
 
 This Application has non-commercial purposes, it is not primarily intended for, or directed towards, commercial advantage or monetary compensation.
 
-###### \*EMOTIONAL VALUES:
+###### \*EMOTIONAL VALUES AND ADDITIONAL REMARKS:
 
 ###### I've been drawn to stars and planets, extra terrestrial worlds and black holes since I was a kid. This project has been developed for enthusiasts like me and has no claims to be fully professional in content.

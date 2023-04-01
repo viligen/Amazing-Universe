@@ -55,6 +55,10 @@ function App() {
                             path='/posts/:postId'
                             element={<MainPostDetails />}
                         />
+                        <Route
+                            path='/posts/:postId/like'
+                            element={<LikePost />}
+                        />
                     </Route>
                     <Route element={<OwnershipRequired />}>
                         <Route
@@ -66,7 +70,6 @@ function App() {
                             element={<DeletePost />}
                         />
                     </Route>
-                    <Route path='/posts/:postId/like' element={<LikePost />} />
 
                     <Route path='*' element={<NotFound />} />
                 </Routes>
