@@ -61,6 +61,10 @@ SoftUni Practice Server : https://github.com/softuni-practice-server/softuni-pra
 The project uses React JS library, React Router, Context API, HTML5, CSS3, module CSS, JS, Jest, Session Storage.
 My own HTML and CSS. Images thanks to NASA and PixaBay. Their official links can be seen and followed in footer section of the application.
 
+### UX/UI:
+
+Responsive design, Active link, Form validation notifications by colors, Detailed placeholders, Delete confirmation
+
 ##### DISCLAIMER:
 
 This Application has non-commercial purposes, it is not primarily intended for, or directed towards, commercial advantage or monetary compensation.
