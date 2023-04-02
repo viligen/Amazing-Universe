@@ -46,6 +46,9 @@
     font-size: 2rem;
     font-weight: 500;
 }
+.loading {
+    font-size: 1.3rem;
+}
 
 @media screen and (max-width: 1350px) {
     .card-grid {

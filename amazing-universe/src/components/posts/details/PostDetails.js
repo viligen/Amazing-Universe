@@ -5,7 +5,10 @@ import { userContext } from '../../../context/userContext';
 import { getAllLikes, getOwnLike } from '../../../services/likeServices';
 import { getOnePost } from '../../../services/postServices';
 import { addToLastSeen } from '../../../utils/lastSeenHelper';
+import ClipLoader from 'react-spinners/ClipLoader';
+import { override } from '../../../utils/spinnerCssOverride';
 import './PostDetails.css';
+
 
 export default function PostDetails() {
     let { postId } = useParams();
@@ -29,12 +32,12 @@ export default function PostDetails() {
             setLikes(count);
         });
 
-        user &&
+        userId &&
             getOwnLike(postId, userId).then((isLiked) => {
                 setOwnLike(isLiked);
-                console.log(isLiked);
+                // console.log(isLiked);
             });
-    }, [postId, user, userId]);
+    }, [postId, userId]);
 
     return post ? (
         <article className='cardLarge'>
@@ -83,8 +86,18 @@ export default function PostDetails() {
             </Link>
         </article>
     ) : (
-        <p>
-            <b>Loading post...</b>
-        </p>
+        <>
+            <ClipLoader
+                color={'orange'}
+                loading={true}
+                cssOverride={override}
+                size={150}
+                aria-label='Loading Spinner'
+                data-testid='loader'
+            />
+            <p className='loading'>
+                <b>Loading post details...</b>
+            </p>
+        </>
     );
 }
