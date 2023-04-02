@@ -67,6 +67,10 @@ My own HTML and CSS. Images thanks to [NASA](https://www.nasa.gov/multimedia/ima
 
 Responsive design - media screen queries, Active link, Data loading notification - spinner and a short message, Form validation notifications by colors, Detailed placeholders, Delete confirmation
 
+### HOSTING:
+
+Firebase Hosting (Front-end)
+
 ##### DISCLAIMER:
 
 This Application has non-commercial purposes, it is not primarily intended for, or directed towards, commercial advantage or monetary compensation.
