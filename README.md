@@ -46,9 +46,9 @@ Have access to Home page, Dashboard page, Login page and Register page. They can
 Authenticated users have access to Home page, Dashboard Page, My Posts page, My Profile page, Create Post page as well as logout option.
 Edit page and Delete page are accessible for post owners only.
 
-### Techniques:
+### TECHNIQUES:
 
-Components structure - stateful and stateless components, Routing, Built-in and custom Hooks, Controlled Forms with validations and appropriate notifications, Context API, Guarded Routes, User State persistency, Module CSS files, Spinner loader, React testing library, Error handling
+Components structure - stateful and stateless components, Routing, Built-in and custom Hooks, Controlled Forms with validations and appropriate notifications, Context API, Guarded Routes, User State persistency, Module CSS files, Spinner loader, React Testing Library, Error handling
 
 ### SECURITY:
 
