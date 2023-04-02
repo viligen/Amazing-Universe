@@ -2,7 +2,7 @@
 
 My ReactJS Project, March 2023 - April 2023
 
-Live at: ("Amazing Universe")
+Live at: [Amazing Universe]("Amazing Universe")
 
 ReactJS @ SoftUni
 
@@ -56,12 +56,12 @@ Custom, extra security features are implemented to prevent unauthorized access t
 
 ### BACK-END:
 
-(https://github.com/softuni-practice-server/softuni-practice-server "SoftUni Practice Server")
+[SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server "SoftUni Practice Server")
 
 ### FRONT-END:
 
 The project uses React JS library, React Router, Context API, HTML5, CSS3, module CSS, JS, Jest, Session Storage.
-My own HTML and CSS. Images thanks to (https://www.nasa.gov/multimedia/imagegallery/index.html "NASA") and (https://pixabay.com/images/search/universe/ "PixaBay"). Their official links appear in footer section of the application as well.
+My own HTML and CSS. Images thanks to [NASA](https://www.nasa.gov/multimedia/imagegallery/index.html "NASA") and [PixaBay](https://pixabay.com/images/search/universe/ "PixaBay"). Their official links appear in footer section of the application as well.
 
 ### UX/UI:
 
