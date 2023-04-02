@@ -56,7 +56,7 @@ Custom, extra security features are implemented to prevent unauthorized access t
 
 ### BACK-END:
 
-[SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server "SoftUni Practice Server")
+[SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server)
 
 ### FRONT-END:
 
