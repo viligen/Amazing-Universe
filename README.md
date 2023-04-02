@@ -2,6 +2,8 @@
 
 My ReactJS Project, March 2023 - April 2023
 
+Live at: ("Amazing Universe")
+
 ReactJS @ SoftUni
 
 ## Documentation:
@@ -13,7 +15,7 @@ My project for 'ReactJS' course at SoftUni. It has been developed for all Astrop
 ### IDEA:
 
 Creating a Single Page Application, which allows users to register, login, read, create, edit and delete content, interact by liking others publications.
-The primary focus of 'Amazing Universe' is on space photography - publishing Posts with favourite images, liking others' posts, etc.
+The primary focus of 'Amazing Universe' is on space photography - publishing Posts with favorite images, liking others' posts, etc.
 
 ### CONTENT:
 
@@ -25,7 +27,7 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 #### - My Posts page: showing users own posts with search options (by title or source), ordered by last published
 
-#### - My Profile page: showing user info, total number of own posts (being also a link to the reletaed collection- My Posts), total likes the user has made as well as a collection of recently seen posts (being also links to each visisted post), ordered by last seen
+#### - My Profile page: showing user info, total number of own posts (being also a link to the related collection- My Posts), total likes the user has made as well as a collection of recently seen posts (being also links to each visited post), ordered by last seen
 
 #### - Details page: showing a detailed info about a post. If the user is authenticated and is the owner of the publication, they get access to edit and delete functionality but cannot like their own posts. Other authenticated users can only like once per post and have no access to edit and delete it. Anonymous users have no access to this page.
 
@@ -37,7 +39,7 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 #### Anonymous Users:
 
-Have access to Home page, Dashboard page, Login page and Register page.They can also use the search implementation to search through larger collections. They cannot see Details pages, Profile related pages and cannot create new posts as well as cannot edit and delete content.
+Have access to Home page, Dashboard page, Login page and Register page. They can also use the search implementation to search through larger collections. They cannot see Details pages, Profile related pages and cannot create new posts as well as cannot edit and delete content.
 
 #### Authenticated Users:
 
@@ -46,24 +48,24 @@ Edit page and Delete page are accessible for post owners only.
 
 ### Techniques:
 
-Components structure - stateful and stateless components, Routing, built-in and custom hooks, controlled forms with validations and appropriate notifications, Context API, Guarded Routes, User State persistency, module CSS files, testing, error handling
+Components structure - stateful and stateless components, Routing, Built-in and custom Hooks, Controlled Forms with validations and appropriate notifications, Context API, Guarded Routes, User State persistency, Module CSS files, Spinner loader, React testing library, Error handling
 
 ### SECURITY:
 
-Custom, extra security features are implemented to prevent unauthorized access to other users' data or others publications editing and deleting - Route Guarding Custom Components.
+Custom, extra security features are implemented to prevent unauthorized access to other users' data or others publications edit and delete actions - Route Guarding Custom Components.
 
 ### BACK-END:
 
-SoftUni Practice Server : https://github.com/softuni-practice-server/softuni-practice-server
+(https://github.com/softuni-practice-server/softuni-practice-server "SoftUni Practice Server")
 
 ### FRONT-END:
 
 The project uses React JS library, React Router, Context API, HTML5, CSS3, module CSS, JS, Jest, Session Storage.
-My own HTML and CSS. Images thanks to NASA and PixaBay. Their official links can be seen and followed in footer section of the application.
+My own HTML and CSS. Images thanks to (https://www.nasa.gov/multimedia/imagegallery/index.html "NASA") and (https://pixabay.com/images/search/universe/ "PixaBay"). Their official links appear in footer section of the application as well.
 
 ### UX/UI:
 
-Responsive design - media screen queries, Active link, Form validation notifications by colors, Detailed placeholders, Delete confirmation
+Responsive design - media screen queries, Active link, Data loading notification - spinner and a short message, Form validation notifications by colors, Detailed placeholders, Delete confirmation
 
 ##### DISCLAIMER:
 
@@ -71,4 +73,4 @@ This Application has non-commercial purposes, it is not primarily intended for, 
 
 ###### \*EMOTIONAL VALUES AND ADDITIONAL REMARKS:
 
-###### I've been drawn to stars and planets, extra terrestrial worlds and black holes since I was a kid. This project has been developed for enthusiasts like me and has no claims to be fully professional in content.
+###### I've been drawn to stars and planets, extra-terrestrial worlds and black holes since I was a kid. This project has been developed for enthusiasts like me and has no claims to be fully professional in content.
