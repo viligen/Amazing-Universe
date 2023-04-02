@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
     getAllPosts,
     getLimitedPosts,
@@ -14,13 +15,20 @@ import styles from './PostsList.module.css';
 export default function PostsList({ count, owner }) {
     const [posts, setPosts] = useState([]);
     const [search, setSearch] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    
     const [isLoading, setIsLoading] = useState(true);
 
     const onSubmit = (e) => {
         e.preventDefault();
+        
         const data = Object.fromEntries(new FormData(e.target));
-        setSearch(data.search);
+        // console.log(data)
+        setSearchParams(encodeURIComponent(`where search=${data.search}`));
+                
+        setSearch(data.search)
         // console.log(data.search);
+        console.log(searchParams)
     };
 
     useEffect(() => {
