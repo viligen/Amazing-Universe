@@ -39,16 +39,16 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 #### Anonymous Users:
 
-Have access to Home page, Dashboard page, Login page and Register page. They can also use the search implementation to search through larger collections. They cannot see Details pages, Profile related pages and cannot create new posts as well as cannot edit and delete content.
+Have access to Home page, Dashboard/Catalog/ page, Login page and Register page. They can also use the search implementation to search through larger collections. They cannot see Details pages, Profile related pages and cannot create new posts as well as cannot edit and delete content. Like action is not available for anonymous users.
 
 #### Authenticated Users:
 
-Authenticated users have access to Home page, Dashboard Page, My Posts page, My Profile page, Create Post page as well as logout option.
-Edit page and Delete page are accessible for post owners only.
+Authenticated users have access to Home page, Dashboard/Catalog/ Page, Post Details page, My Posts page, My Profile page, Create Post page as well as logout option. Like option is available once per post if the user is not the post's owner.
+Edit page and Delete page are accessible for post owners only. Users cannot like their own posts.
 
 ### TECHNIQUES:
 
-Components structure - stateful and stateless components, Routing, Built-in and custom Hooks, Controlled Forms with validations and appropriate notifications, Context API, Guarded Routes, User State persistency, Module CSS files, Spinner loader, React Testing Library, Error handling
+Components structure - stateful and stateless components, Routing, Built-in and custom Hooks, Controlled Forms with validations and appropriate notifications, Context API, Guarded Routes, User State persistency, Module CSS files, Spinner loader, React Testing Library and Jest, Error handling
 
 ### SECURITY:
 
@@ -62,6 +62,7 @@ Custom, extra security features are implemented to prevent unauthorized access t
 
 The project uses React JS library, React Router, Context API, HTML5, CSS3, module CSS, JS, Jest, Session Storage.
 My own HTML and CSS.
+
 Images thanks to [NASA](https://www.nasa.gov/multimedia/imagegallery/index.html 'NASA') and [PixaBay](https://pixabay.com/images/search/universe/ 'PixaBay'). Their official links appear in footer section of the application as well.
 
 ### UX/UI:
