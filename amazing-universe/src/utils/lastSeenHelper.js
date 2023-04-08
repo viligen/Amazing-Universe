@@ -8,7 +8,7 @@ export const addToLastSeen = (post) => {
     // console.log(storageObj);
     if (storageObj) {
         const filtered_key = Object.keys(storageObj).filter(
-            (key) => storageObj[key]._id === post._id
+            (key) => storageObj[key]._id === post?._id
         );
         // console.log(filtered_key);
         filtered_key.length !== 0 && delete storageObj[filtered_key[0]];

@@ -40,7 +40,7 @@ export async function requestFunc(method, url, data) {
     } catch (err) {
         console.log(err.message);
         alert(
-            'Something went wrong. Check your email and password and try again!'
+            'Something went wrong. Try again!'
         );
         // throw err;
     }
