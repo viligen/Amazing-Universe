@@ -23,7 +23,7 @@ The primary focus of 'Amazing Universe' is on space photography - publishing Pos
 
 #### - Home page: showing last 3 of the most recent posts, ordered by last published;
 
-#### - Dashboard page: showing the full collection of posts, ordered by last published, with search options (by title or source)
+#### - Dashboard/Catalog/ page: showing the full collection of posts, ordered by last published, with search options (by title or source)
 
 #### - My Posts page: showing users own posts with search options (by title or source), ordered by last published
 
@@ -61,7 +61,7 @@ Custom, extra security features are implemented to prevent unauthorized access t
 ### FRONT-END:
 
 The project uses React JS library, React Router, Context API, HTML5, CSS3, module CSS, JS, Jest, Session Storage.
-My own HTML and CSS. 
+My own HTML and CSS.
 Images thanks to [NASA](https://www.nasa.gov/multimedia/imagegallery/index.html 'NASA') and [PixaBay](https://pixabay.com/images/search/universe/ 'PixaBay'). Their official links appear in footer section of the application as well.
 
 ### UX/UI:
@@ -74,7 +74,7 @@ Firebase Hosting (Front-end)
 
 ### TESTING:
 
-Unit testing with Jest and React Testing Library - 20 unit tests. 
+Unit testing with Jest and React Testing Library - 20 unit tests.
 Tested componenets: 404.js, NewPostBtn.js, PostArticle.js, SmallPost.js
 
 ##### DISCLAIMER:
