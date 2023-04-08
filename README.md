@@ -71,7 +71,7 @@ Responsive design - media screen queries, Active link, Data loading notification
 
 Firebase Hosting (Front-end)
 
-### TESTING
+### TESTING:
 
 Unit testing with Jest and React Testing Library. 20 unit tests, tested componenets: 404.js, NewPostBtn.js, PostArticle.js, SmallPost.js
 
